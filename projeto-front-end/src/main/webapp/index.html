@@ -5,7 +5,7 @@
 <title>TESTE</title>
 </head>
 <body>
-	<form action="">
+	<form action="salvarUsuario" method="post" onsubmit="return validarDados()? true : false">
 		
 		<table style="background-color: #CFCFCF">
 			<tr>
@@ -26,5 +26,27 @@
 			</tr>
 		</table>
 	</form>
+	
+	<script type="text/javascript">
+		function validarDados() {
+			var nome = document.getElementById("nome").value;
+			var login = document.getElementById("login").value;
+			var senha = document.getElementById("senha").value;
+			
+			if(nome == ''){
+				alert('Informe um nome!');
+				return false;
+			}else if(login == ''){
+				alert('Informe um login!');
+				return false;
+			}else if(senha == ''){
+				alert('Informe uma senha!');
+				return false;
+			}
+			return true;
+		}
+	fun
+	
+	</script>
 </body>
 </html>
